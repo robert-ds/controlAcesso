@@ -7,15 +7,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
+/////////////////////////////////////////////
+//
+//
+//	@Author Robert Vasquez - 2019
+//
+//
+////////////////////////////////////////////
 
 public class Ventana {
 
 	private JFrame frame;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
+	//Lanzando Aplicación
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -29,16 +34,13 @@ public class Ventana {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	//Creando Aplicación
 	public Ventana() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
+	//Creando Ventana
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
@@ -50,6 +52,7 @@ public class Ventana {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
+		//Evento que Valida el texto
 		JButton btnNewButton = new JButton("Entrar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
